@@ -1,0 +1,531 @@
+/* 
+References: 
+- https://www.w3schools.com/cssref/css_selectors.asp
+- https://www.w3schools.com/cssref/default.asp
+- https://www.w3schools.com/html/
+- https://stackoverflow.com/questions/8287779/how-to-use-the-required-attribute-with-a-radio-input-field
+- https://stackoverflow.com/questions/41250283/css-flexbox-how-to-change-the-width-of-the-element
+*/
+
+/* width and height for all elements, before, and after their content will include content, padding, and border */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* remove default CSS for anchor tags */
+a:link,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a img {
+    display: block;
+}
+
+/* the HTML body will have a black bg and margins will be set to 0 */
+/* font family will be set to Google Sans, Product Sans, Roboto, Arial */
+body {
+    width: 100%;
+    background: black;
+    margin: 0;
+    font-family: "Google Sans", "Product Sans", "Roboto", "Arial";
+}
+
+/* set header as flex box with width 100%, contents spaced between, and aligned center vertically */
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+hr {
+    border-color: #fcb13e;
+}
+
+form {
+    width: 40%;
+}
+
+legend {
+    font-size: large;
+    font-weight: 500;
+}
+
+input,
+select {
+    height: 2rem;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Google Sans", "Product Sans", "Roboto", "Arial";
+}
+
+input {
+    padding: 1em;
+}
+
+select {
+    padding: 0 1em;
+}
+
+form input[type=radio],
+form input[type=checkbox] {
+    height: initial;
+    width: initial;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background: #fcb13e;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    font-size: large;
+}
+
+main {
+    padding: 0 calc(1rem + 10px);
+    color: #fcb13e;
+}
+
+footer {
+    background: #fcb13e;
+    padding: calc(1rem + 10px);
+    justify-content: space-around;
+    display: flex;
+}
+
+.article--whitespace {
+    height: 48px;
+}
+
+.article--container {
+    margin: 0;
+}
+
+.article__head,
+.article__subheading {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+h3 .article__subheading {
+    font-size: large;
+}
+
+.article--about {
+    display: flex;
+    justify-content: space-between;
+    column-width: auto auto;
+    gap: 4em;
+    align-items: center;
+}
+
+.article--about img {
+    width: 50%;
+}
+
+.article--about p,
+.grid__item--why p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.article__subheading {
+    font-size: large;
+}
+
+.article--about dt {
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.article--about li,
+.article--about dd {
+    line-height: 1.5em;
+}
+
+.article--vismis {
+    align-items: flex-start;
+}
+
+.overlay--dark:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.overlay--dark::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.sect--container {
+    margin: 0 0 0 8.6%;
+    max-width: 300px;
+    position: absolute;
+    text-align: left;
+    top: 35%;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.grid__container--partner {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    margin-bottom: 20px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.grid__item--partner img {
+    max-width: 8rem;
+}
+
+.grid__container--why {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+    grid-template-rows: auto;
+    gap: 0.75%;
+    margin-bottom: 20px;
+}
+
+.grid__container--time {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 0.3em;
+    justify-content: space-evenly;
+}
+
+.flex__container--phone {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    justify-content: space-evenly;
+}
+
+.flex__container--reception {
+    display: flex;
+    gap: 1em;
+    align-content: center;
+}
+
+.grid__container--contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 2rem;
+    justify-content: start;
+}
+
+.grid__item--why,
+.sect__border--contact {
+    width: inherit;
+    padding: 1em;
+    border: 1px solid #fcb13e;
+}
+
+.sect__border--contact {
+    color: black;
+    background-color: #fcb13e;
+}
+
+.grid__item--why img {
+    max-height: 10rem;
+}
+
+.grid__item--why p {
+    height: 60%;
+    width: inherit;
+}
+
+.article--news {
+    padding: 1em;
+    border: 1px solid #fcb13e;
+}
+
+.p--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.p--details {
+    font-size: 1.4em;
+}
+
+.p--calltoact {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.footer__nav a {
+    padding: 0.2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.link__tel:link {
+    text-decoration: underline;
+}
+
+.link__tel:hover {
+    color: white;
+}
+
+.footer__nav a:hover {
+    background-color: white;
+}
+
+.btn__bar--socials img {
+    border-radius: 10px;
+}
+
+.btn__bar--socials img:hover {
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.form__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__container {
+    background-color: white;
+    color: black;
+}
+
+.login {
+    width: 50%;
+    height: fit-content;
+    display: block;
+}
+
+.remove-hover {
+    gap: 0.4px;
+}
+
+.remove-hover img:hover {
+    background: white;
+}
+
+/* set header logo size and padding (for tablets and laptops) */
+.header__logo {
+    height: 125px;
+    padding: 1rem;
+}
+
+.header__logo:hover {
+    box-shadow: 2px 2px 10px 6px #fcb13e;
+    transition: box-shadow 0.3s ease;
+}
+
+/* set css for button bar */
+.btn__bar {
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    padding: 0 1rem;
+    display: flex;
+    column-gap: 3vw;
+    align-items: center;
+}
+
+.btn__bar--socials {
+    padding: 0;
+}
+
+/* set css for all buttons */
+.btn {
+    height: fit-content;
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-weight: 500;
+    border: 2px solid white;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 10px 6px white;
+}
+
+nav .btn {
+    border: 0;
+    padding: 0.5em 1em;
+}
+
+.btn--nav {
+    border-right: 0.5px solid black;
+}
+
+.btn--nav:first-child {
+    border-left: 0.5px solid black;
+}
+
+.btn--nav:hover {
+    background: white;
+    color: #fcb13e;
+}
+
+.btn--active {
+    border-bottom: 3px solid #37b6ff;
+    border-style: outset;
+    border-top: 0;
+}
+
+/* set sign in button css */
+.btn--sign-in {
+    background: #fcb13e;
+    font-size: large;
+}
+
+/* set sign in button when hover */
+.btn--sign-in:hover {
+    background: white;
+    color: #fcb13e;
+    transition: all 0.3s ease;
+}
+
+/* set register button css */
+.btn--register {
+    background:
+        #37b6ff;
+    font-size: large;
+}
+
+/* set register button when hover */
+.btn--register:hover {
+    background: white;
+    color:
+        #37b6ff;
+    transition: all 0.3s ease;
+}
+
+.btn__bar img {
+    height: 3rem;
+}
+
+.remove-hover img {
+    padding: 4px;
+    height: 5em;
+}
+
+.footer__socials,
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer__nav {
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav {
+    margin: 0;
+    width: 80%;
+    padding: 0 calc(1rem + 10px);
+    column-gap: initial;
+}
+
+/* set css (for phones) */
+@media screen and (max-width: 425px) {
+    header {
+        display: initial;
+        padding: 0;
+    }
+
+    /* create button bar for sign in and register with 100% width and space around contents */
+    .btn__bar {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* auto adjust size for logo to be 100% in width */
+    .header__logo {
+        width: 100%;
+        height: auto;
+        padding: 5vw;
+    }
+
+    /* make button bar's width 100% of screen width, centered, separated by black border */
+    .btn {
+        width: 46vw;
+        text-align: center;
+        border: 0.5px solid black;
+    }
+}
+
+#sign-in {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#bg--discover {
+    background: url("./assets/discover.jpg");
+    background-size: cover;
+}
+
+#bg--courses {
+    background: url("./assets/courses.jpg");
+    background-size: cover;
+}
+
+#bg--news {
+    background: url("./assets/news.jpg");
+    background-size: cover;
+}
+
+#article--mission {
+    width: 100%;
+}
+
+[id*="bg-"] {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    border-radius: 0.5rem;
+}
+
+[id*="bg-"]::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+}
+
+#to-top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#required {
+    color: red;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Sunbic</title>
+    <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Sunbic is an online public university, renowned as one of the most prestigious universities by number of students. The majority of the  undergraduate students are based in Indonesia and principally study off-campus; many of its courses can also be studied anywhere in the world."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans+Text:400,500,700,400i,500i,700i|Google+Sans:400,500|Google+Sans+Display:400|Product+Sans:400&amp;lang=en"
+      rel="stylesheet"
+      nonce="EahFU9GM40F-kezmy1NN5g"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="./home.html">
+          <img src="./assets/logo.png" alt="Sunbic" class="header__logo" />
+        </a>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="btn__bar nav">
+        <a href="./home.html" class="btn--nav">
+          <li class="btn">Home</li>
+        </a>
+        <a href="./news.html" class="btn--nav">
+          <li class="btn">News</li>
+        </a>
+        <a href="./courses.html" class="btn--nav">
+          <li class="btn">Courses</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main class="login__container">
+      <article class="article--whitespace"></article>
+      <h1>Admissions Application</h1>
+      <article class="article--whitespace"></article>
+
+      <article>
+      <div class="form__container">
+        <img class="login" src="./assets/login.png" />
+      
+        <form action="home.html">
+          <fieldset>
+            <legend>Your Information</legend>
+
+            <p>
+              <label for="first-name">First Name: <span id="required">*</span></label><br>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="First Name"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="last-name">Last Name: <span id="required">*</span></label><br>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Last Name"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="email">Email: <span id="required">*</span></label><br>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="password">Password: <span id="required">*</span></label><br>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </p>
+            </fieldset>
+
+            <br>
+
+          <fieldset>
+            <legend>Degree of Choice</legend>
+            <p>
+              <label for="major">Major: <span id="required">*</span></label><br>
+              <select name="major" id="major" required>
+                <option disabled selected value>Course</option>
+                <optgroup label="Undergraduate Courses">
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Business & Management">Business & Management</option>
+                  <option value="Health">Health</option>
+                  <option value="Art">Art</option>
+                </optgroup>
+
+                <optgroup label="Postgraduate Courses">
+                  <option value="Psychology">Psychology</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Law">Law</option>
+                  <option value="Science">Science</option>
+                </optgroup>
+
+                <optgroup label="Short Courses">
+                  <option value="Film">Film</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                </optgroup>
+              </select>
+            </p>
+
+            <p>
+              <label for="country">Country of Residence: <span id="required">*</span></label><br>
+              <input
+                type="text"
+                name="country"
+                id="country"
+                placeholder="Country of Residence"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="phone">Phone Number:  <span id="required">*</span></label><br>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="555-555-5555"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </p>
+
+            <p>
+              Gender: <span id="required">*</span><br>
+              <input type="radio" name="gender" id="male" value="male" required />
+              <label for="male">Male</label>
+              &nbsp;&nbsp;
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">Female</label>
+              &nbsp;&nbsp;
+              <input type="radio" name="gender" id="other" value="other" />
+              <label for="other">Other</label>
+            </p>
+          </fieldset>
+          <br>
+          <p>
+          <input type="checkbox" name="terms" id="agree" value="agree" required />
+          <label for="agree">I consent to submitting my personal information. <span id="required">*</span></label>
+          </p>
+          <br>
+          <button type="submit" class="btn btn--sign-in">Submit</button>
+          &nbsp;
+          <button type="reset" class="btn btn--register">Reset</button>
+        </form>
+      </div>
+        <br>
+    </main>
+
+    <footer>
+      <div class="footer__socials">
+        <h2>OUR SOCIALS</h2>
+        <div>
+          <ul class="btn__bar btn__bar--socials">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><li><img src="./assets/facebook.png" alt="Facebook" /></li
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><li><img src="./assets/instagram.png" alt="Instagram" /></li
+            ></a>
+            <a href="https://twitter.com/" target="_blank"
+              ><li><img src="./assets/twitter.png" alt="Twitter" /></li
+            ></a>
+            <a href="https://www.youtube.com/" target="_blank"
+              ><li><img src="./assets/youtube.png" alt="YouTube" /></li
+            ></a>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <ul class="btn__bar footer__nav">
+          <h2>MORE INFORMATION</h2>
+          <a href="./about.html"><li>About Us</li></a>
+          <a href="./contact.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
